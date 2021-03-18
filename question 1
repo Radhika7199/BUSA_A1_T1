@@ -1,16 +1,18 @@
-[ec2-user@ip-172-31-12-164 ~]$ #!/bin/bash
-[ec2-user@ip-172-31-12-164 ~]$ #creating files
-[ec2-user@ip-172-31-12-164 ~]$ touch -t 202103081800 foo
-[ec2-user@ip-172-31-12-164 ~]$ touch -t 202103081801 goo
-[ec2-user@ip-172-31-12-164 ~]$ touch -t 202103081802 hoo
-[ec2-user@ip-172-31-12-164 ~]$ # creatind older.sh
-[ec2-user@ip-172-31-12-164 ~]$ vi older.sh
-[ec2-user@ip-172-31-12-164 ~]$ ls older.sh
-older.sh
-[ec2-user@ip-172-31-12-164 ~]$ cat older.sh
+#!/bin/bash
+#creating files
+touch -t 202103081800 foo
+touch -t 202103081801 goo
+touch -t 202103081802 hoo
+
+# creating older.sh
+vi older.sh
+
 ls -lt | tail -1
 
-[ec2-user@ip-172-31-12-164 ~]$ chmod u+x older.sh
-[ec2-user@ip-172-31-12-164 ~]$ ./older.sh
--rw-rw-r-- 1 ec2-user ec2-user  0 Mar  8 18:00 foo
+# to make file public
+chmod u+x older.sh
+
+# to check the output
+./older.sh
+
 
