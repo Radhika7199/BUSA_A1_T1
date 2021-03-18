@@ -1,0 +1,18 @@
+[ec2-user@ip-172-31-12-164 ~]$ #creating funny.sh
+[ec2-user@ip-172-31-12-164 ~]$ vi funny.sh
+[ec2-user@ip-172-31-12-164 ~]$ cat funny.sh
+if [ $# -eq 0 ];
+then echo "This is NOT funny"
+
+else echo " This is funny"
+fi
+
+[ec2-user@ip-172-31-12-164 ~]$ chmod u
+chmod: missing operand after ‘u’
+Try 'chmod --help' for more information.
+[ec2-user@ip-172-31-12-164 ~]$ chmod u+x funny.sh
+[ec2-user@ip-172-31-12-164 ~]$ ./funny.sh
+This is NOT funny
+[ec2-user@ip-172-31-12-164 ~]$ nano funny.sh
+[ec2-user@ip-172-31-12-164 ~]$ ./funny.sh
+This is funny
