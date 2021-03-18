@@ -1,1 +1,17 @@
+#a)
+
 curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-10-shell-programming--case-cp.sh      --output case-cp.sh
+
+#b)
+
+if [ 0 < time < 20 ];
+then echo "no chime"
+
+elif [20 < time < 40];
+then echo " one chime"
+
+else [ 40 < time < 60];
+
+fi
+
+
